@@ -1,0 +1,58 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Чайный столик и три стула",
+            "slug": "chajnyj-stolik-i-tri-stula",
+            "description": "Идеальный набор для вашей гостиной или кухни.",
+            "image": "goods_images/set_of_tea_table_and_three_chairs.jpg",
+            "price": "150.00",
+            "discount": "10.00",
+            "quanity": 60,
+            "category": 2
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Двуспальная кровать",
+            "slug": "dvuhspalnaya-krovat",
+            "description": "Кровать выполнена в современном и элегантном стиле.",
+            "image": "",
+            "price": "670.00",
+            "discount": "0.00",
+            "quanity": 11,
+            "category": 3
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 4,
+        "fields": {
+            "name": "Угловой диван для гостинной",
+            "slug": "uglovoj-divan-dlya-gostinnoj",
+            "description": "Угловой диван, идеально подходящий для больших семейных вечеров!",
+            "image": "goods_images/corner_sofa.jpg",
+            "price": "610.00",
+            "discount": "5.00",
+            "quanity": 99,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 5,
+        "fields": {
+            "name": "Офисный стул",
+            "slug": "stul-ofisnyj",
+            "description": "Удобный стул, который не устанет вашу спину, даже после долгих рабочих часов...",
+            "image": "goods_images/office_chair.jpg",
+            "price": "35.00",
+            "discount": "0.00",
+            "quanity": 200,
+            "category": 5
+        }
+    }
+]
