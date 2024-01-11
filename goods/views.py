@@ -1,21 +1,15 @@
 from django.shortcuts import render
 
+from goods.models import Products
+
 # Create your views here.
 def catalog(request):
+
+    goods = Products.objects.all()
+
     context = {
         'title': "Home - Каталог",
-        'goods': [
-            {
-                'name': "The Tea from 3 table",
-                'description': 'Котавыда ывдаоф23 овлао',
-                'price': 157.00,
-            },
-            {
-                'name': "The Tea from 2 table",
-                'description': 'Котавыда ывдаоф23 овлао',
-                'price': 100.00,
-            },
-        ]
+        'goods': goods,
     }
     return render(request, 'goods/catalog.html', context)
 
