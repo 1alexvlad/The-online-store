@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'home',
+        'NAME': 'test',
         "USER": 'home',
         "PASSWORD": 'home',
         "HOST": 'localhost',
@@ -137,3 +137,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Переопределили модель
+AUTH_USER_MODEL = 'users.User'
