@@ -9,6 +9,12 @@
                 <h2 class="text-center mb-4">Авторизация</h2>
                 <form action="{% url "user:login" %}" method="post">
                     {% csrf_token %}
+{% comment %} Если при заходе на стр. это был редирект через декоратор, там будет get запрос
+Если requste.GET есть ключ next
+{% endcomment %}
+                    {% if requste.GET.next %}
+                        <input type="hidden" name="next" value={{ request.GET.next }}>
+                    {% endif %}
 {% comment %} Этот пример правильней чем ниже задокументированный, потому что таким образом 
 не прописываем в формах строки из html шаблонах (autofocus, сlass, placeholder {% endcomment %}
                     {% if form.non_field_errors %}
