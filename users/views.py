@@ -17,8 +17,9 @@ def login(request):
             if user:
                 auth.login(request, user)
                 messages.success(request, f"{username}, Вы вошли в аккаунт")
+                redirect_page = request.POST.get('next', None)
 # Если не авторизированный пользователь захочет по @login_required, то у него будет эта стр. с get запросом url
-                if request.POST.get('next', None):
+                if redirect_page and redirect_page != reverse('user:logout'):
                     return HttpResponseRedirect(request.POST.get('next'))
                 return HttpResponseRedirect(reverse('main:index'))
     else:
